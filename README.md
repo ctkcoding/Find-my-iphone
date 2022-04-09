@@ -1,5 +1,5 @@
 # Find-my-iphone
-Link icloud, databse, and web ui to log iphone's location information &amp; for viewing later.  
+Link icloud, database, and webUI to log iphone's location information &amp; for viewing later.  
 
 ## PREPARE
 ```
