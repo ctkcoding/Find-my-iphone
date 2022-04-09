@@ -8,34 +8,39 @@
 
   <meta property="og:title" content="Find my iphone">
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Using 'Find my iphone', record iphone's location history in spreadsheet.">
-  <meta property="og:site_name" content="Find my iphone">
-  
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js' defer></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
-  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
-  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css" />
+  <meta property="og:description" content="Using 'Find my iphone', record location history.">
+  <meta property="og:site_name" content="Find my iphone - text log page">
   
   <script src="index.js" defer></script>
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
-  
-  <style>
-    body { margin: 0; padding: 0; font-family: Helvetica; }
-    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
-    #contents { position: fixed; z-index: 1; top: 10px; left: 10px; border: 1.5px solid rgba(0,0,0,0.1); border-radius: 7px; }
-    #trigger { padding: .7rem .75rem; }
-    #apple { color: black;}
-  </style>
 </head>
 
 <body>
-  <div id='map'></div>
+  <h1>Devices</h1>
+  <table>
+    <tr>
+      <th>Device Id</th>
+      <th>Device Name</th>
+    </tr>
+    <tr>
+      <td>sample id</td>
+      <td>sample name</td>
+    </tr>
+  </table>
 
-  <div id='contents'>
-    <button type="button" id="trigger"><i class="fab fa-apple" id="apple"></i></button>
-  </div>
+  <h1>Pings</h1>
+  <table>
+    <tr>
+      <th>Device Id</th>
+      <th>Timestamp</th>
+      <th>Coordinates</th>
+      <th>Battery pct.</th>
+    </tr>
+    <tr>
+      <td>sample id</td>
+      <td>sample time</td>
+      <td>sample coordinates</td>
+      <td>sample battery</td>
+    </tr>
+  </table>
 </body>
 </html>

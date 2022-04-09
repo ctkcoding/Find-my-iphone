@@ -7,22 +7,20 @@ icloud.apple_id = process.env.APPLE_ID;
 icloud.password = process.env.PASSWORD;
 icloud.cookieFileStore = "icloud.cookie";
 router.get('/', async(req, res) => {
-    icloud.getDevices(function(error, devices) {
-        var device;
+    icloud.getDevices(function(error, response) {
+        var snapshot;
         var array = [];
         if (error) {
             console.log(error);
         }else{
-            devices.forEach(function(d) {
-                if (device == undefined && d.location && d.lostModeCapable) {
-                    device = d;
+            response.forEach(function(dataCandidate) {
+                if (snapshot == undefined && dataCandidate.location && dataCandidate.lostModeCapable) {
+                    snapshot = dataCandidate;
                 }
             });
-            if (device) {
-                console.log(device)
-                array.push(device.deviceDisplayName);
-                array.push(device.location.latitude);
-                array.push(device.location.longitude);
+            if (snapshot) {
+                console.log(snapshot)
+                array.push(snapshot);
             }
         }
         res.send(array);

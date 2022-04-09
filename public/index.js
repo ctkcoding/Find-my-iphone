@@ -13,16 +13,6 @@ window.addEventListener('load', (event) => {
     });
 });
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibWFrb2JvdXp1IiwiYSI6ImNrYWF5and0MzFhYnMyc214ZGo3OWd3cHQifQ.pPCfwEss5pJhm4Yu7kvj1w';
-var center = [139.5798591, 35.703521];
-var zoom = 7;
-
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: center,
-    zoom: zoom
-});
 
 map.on('load', () => { 
     axios.get('/sheet')
@@ -55,7 +45,7 @@ trigger.addEventListener('click', () => {
 });
 
 function upload() {
-    axios.get('/icloud')
+    axios.get('/queryLocation')
     .then(response => {
         console.log(response);
         axios.post('/sheet', {
