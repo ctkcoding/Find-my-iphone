@@ -1,5 +1,5 @@
 # Find-my-iphone
-Link icloud, database, and webUI to log iphone's location information &amp; for viewing later.  
+Express js app checking icloud for iphone's location, saving to database, and displaying through webUI.
 
 ## PREPARE
 ```
